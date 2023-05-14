@@ -10,31 +10,50 @@ import { Card, Tile } from "react-native-elements";
 import { Avatar, Button, Chip, Divider, List, Text } from "react-native-paper";
 import Spacer from "../components/Spacer";
 import { Ionicons } from "@expo/vector-icons";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
 
 const RestauarantDetailScreen = () => {
+	const { cart, pending, error } = useSelector((state) => state.cartState);
+
+	const dispatch = useDispatch();
 	const restauarantName = "Restaurant Name";
 	const menuItemTitleName = "Menu item title here";
 	const menuItemDescription = "Menu item description here";
-	const subMenuTitle = "Submenu title here";
-	const description = "Menu choice description here";
-	const price = "$12,50";
+
 	const menuItems = [
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
+		{
+			id: "1",
+			name: "First Item",
+			description: "item description here",
+			price: 5,
+			quantity: 1,
+			restaurant: "",
+		},
+		{
+			id: "2",
+			name: "Second Item",
+			description: "item description here",
+			price: 8.5,
+			quantity: 1,
+			restaurant: "",
+		},
+		{
+			id: "3",
+			name: "Third Item",
+			description: "item description here",
+			price: 9.5,
+			quantity: 1,
+			restaurant: "",
+		},
 	];
+
+	const handleAddToCart = (menuItem) => {
+		console.log("cartitem: ", menuItem);
+		dispatch(addToCart(menuItem));
+	};
+
 	return (
 		<ScrollView style={styles.root}>
 			<View>
@@ -103,37 +122,25 @@ const RestauarantDetailScreen = () => {
 										<>
 											<List.Item
 												style={{
-													// display: "flex",
-													// flexDirection: "row",
-													// justifyContent: "space-between",
 													backgroundColor: "white",
 												}}
-												title={subMenuTitle}
-												// left={(props) => (
-												// 	<Text
-												// 		style={{
-												// 			alignSelf: "center",
-												// 			color: "purple",
-												// 			fontWeight: "700",
-												// 		}}>
-												// 		Price: $23,-
-												// 	</Text>
-												// )}
+												title={menuItem.name}
 												description={() => (
 													<View>
-														<Text>{description}</Text>
+														<Text>{menuItem.description}</Text>
 														<Text
 															style={{
 																marginTop: 10,
 																color: "purple",
 																fontWeight: "700",
 															}}>
-															{price}
+															{`Price: $${menuItem.price}`}
 														</Text>
 													</View>
 												)}
 												right={(props) => (
 													<TouchableOpacity
+														onPress={() => handleAddToCart(menuItem)}
 														style={{ alignSelf: "center", marginLeft: 5 }}>
 														<Ionicons
 															name='add-circle'

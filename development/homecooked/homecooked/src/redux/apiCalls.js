@@ -31,6 +31,7 @@ export const signUpUser = async (userInfo, dispatch) => {
 export const signInUser = async (userInfo, dispatch) => {
 	console.log("SIGNING IN USER");
 
+	console.log(userInfo);
 	dispatch(signInStart());
 	try {
 		const response = await tracker.post("/signin", {
@@ -44,6 +45,12 @@ export const signInUser = async (userInfo, dispatch) => {
 		} catch (e) {
 			console.log("could not save token");
 		}
+		console.log("token", token);
+		// const user = await tracker.get("/user", {
+		// 	headers: {
+		// 		Authorization: `Bearer ${token}`,
+		// 	},
+		// });
 		dispatch(signInSuccess(response.data));
 		dispatch(setToken(token));
 		dispatch(clearError());

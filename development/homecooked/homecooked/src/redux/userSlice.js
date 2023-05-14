@@ -6,6 +6,7 @@ export const userSlice = createSlice({
 		user: {
 			email: "",
 			password: "",
+			username: "",
 			token: "",
 		},
 		pending: false,
