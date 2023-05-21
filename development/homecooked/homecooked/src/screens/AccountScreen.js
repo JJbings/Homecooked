@@ -13,12 +13,19 @@ import { useDispatch, useSelector } from "react-redux";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Avatar, Button, List, Text } from "react-native-paper";
 import { Input } from "react-native-elements";
+import { updateUserInfo } from "../redux/apiCalls";
 
 const AccountScreen = ({ navigation }) => {
-	const { error, pending, user } = useSelector((state) => state.userState);
-	console.log(user);
+	const { error, pending, user, token } = useSelector(
+		(state) => state.userState
+	);
+
 	const dispatch = useDispatch();
-	const [name, setName] = useState("John");
+	const [userName, setUserName] = useState("");
+	const [email, setEmail] = useState("");
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
+
 	const removeToken = async () => {
 		try {
 			await AsyncStorage.removeItem("token");
@@ -27,10 +34,24 @@ const AccountScreen = ({ navigation }) => {
 		}
 	};
 	useEffect(() => {
-		console.log(user);
+		if (user) {
+			if (!userName || userName === "") {
+				setEmail(user.email);
+				setUserName(user.username);
+				setFirstName(user.firstname);
+				setLastName(user.lastname);
+			}
+		}
 		return () => {};
 	}, [user]);
 
+	const resetUser = () => {
+		console.log(user);
+		setEmail(user.email);
+		setUserName(user.username);
+		setFirstName(user.firstname);
+		setLastName(user.lastname);
+	};
 	return (
 		<SafeAreaView forceInset={{ top: "always" }}>
 			<View style={{ backgroundColor: "white", height: "100%" }}>
@@ -44,21 +65,22 @@ const AccountScreen = ({ navigation }) => {
 
 					<Spacer margin={30} mb={10}>
 						<View style={{ width: 300, marginLeft: 30 }}>
-							<Text variant='bodySmall'> Name:</Text>
-							<Input value={name} onChangeText={setName}></Input>
-						</View>
-						<View style={{ width: 300, marginLeft: 30 }}>
 							<Text variant='bodySmall'> Username:</Text>
-							<Input value='John123'></Input>
+							<Input value={userName} onChangeText={setUserName}></Input>
 						</View>
 						<View style={{ width: 300, marginLeft: 30 }}>
 							<Text variant='bodySmall'> Email:</Text>
-							<Input value='John@admin.nl'></Input>
+							<Input value={email} onChangeText={setEmail}></Input>
 						</View>
 						<View style={{ width: 300, marginLeft: 30 }}>
-							<Text variant='bodySmall'> Phone:</Text>
-							<Input value='John'></Input>
+							<Text variant='bodySmall'> Firstname:</Text>
+							<Input value={firstName} onChangeText={setFirstName}></Input>
 						</View>
+						<View style={{ width: 300, marginLeft: 30 }}>
+							<Text variant='bodySmall'> Lastname:</Text>
+							<Input value={lastName} onChangeText={setLastName}></Input>
+						</View>
+
 						<View
 							style={{
 								display: "flex",
@@ -66,31 +88,44 @@ const AccountScreen = ({ navigation }) => {
 								alignItems: "center",
 								justifyContent: "space-around",
 								marginHorizontal: 70,
-							}}>
-							<Button
-								style={styles.LogoutButton}
-								mode='contained'
-								onPress={() => {
-									dispatch(logout());
-									removeToken();
-									//navigation.popToTop();
-								}}>
-								Reset
-							</Button>
-							<Button
-								style={styles.LogoutButton}
-								mode='contained'
-								onPress={() => {
-									dispatch(logout());
-									removeToken();
-									//navigation.popToTop();
-								}}>
-								Save
-							</Button>
-						</View>
+							}}></View>
 					</Spacer>
 				</ScrollView>
 				<View style={{ marginBottom: 15, marginLeft: 80, marginRight: 80 }}>
+					<View
+						style={{
+							flexDirection: "row",
+							justifyContent: "space-around",
+							marginBottom: 10,
+						}}>
+						<Button
+							style={styles.LogoutButton}
+							mode='outlined'
+							onPress={() => {
+								resetUser();
+							}}>
+							Reset
+						</Button>
+						<Button
+							style={styles.LogoutButton}
+							mode='outlined'
+							onPress={() => {
+								updateUserInfo(
+									{
+										username: userName,
+										email,
+										firstname: firstName,
+										lastname: lastName,
+										phone,
+									},
+									token,
+									dispatch
+								);
+							}}>
+							Save
+						</Button>
+					</View>
+
 					<Button
 						style={styles.LogoutButton}
 						mode='contained'

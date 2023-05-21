@@ -4,43 +4,44 @@ const Restaurant = mongoose.model("Restaurant");
 const restaurantRouter = express.Router();
 
 // Create a new restaurant
-restaurantRouter.post("/restaurant", async (req, res) => {
-  console.log("creating restaurant");
-  const { name, address, phone, email, description, image } = req.body;
-  const restaurant = new Restaurant({
-    name,
-    address,
-    phone,
-    email,
-    description,
-    image,
-  });
-  try {
-    await restaurant.save();
-    res.status(201).json(restaurant);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
-});
-restaurantRouter.post("/restaurants", async (req, res) => {
-  req.body.map(async (restaurant) => {
-    const { name, address, phone, email, description, image } = restaurant;
-    const newRestaurant = new Restaurant({
-      name,
-      address,
-      phone,
-      email,
-      description,
-      image,
-    });
-    try {
-      await newRestaurant.save();
-    } catch (err) {
-      res.status(400).json({ message: err.message });
-    }
-  });
-  res.status(201).json({ message: "Restaurants created" });
-});
+// restaurantRouter.post("/restaurant", async (req, res) => {
+//   console.log("creating restaurant");
+//   const { name, address, phone, email, description, image } = req.body;
+//   const restaurant = new Restaurant({
+//     name,
+//     address,
+//     phone,
+//     email,
+//     description,
+//     image,
+//   });
+//   try {
+//     await restaurant.save();
+//     res.status(201).json(restaurant);
+//   } catch (err) {
+//     res.status(400).json({ message: err.message });
+//   }
+// });
+
+// restaurantRouter.post("/restaurants", async (req, res) => {
+//   req.body.map(async (restaurant) => {
+//     const { name, address, phone, email, description, image } = restaurant;
+//     const newRestaurant = new Restaurant({
+//       name,
+//       address,
+//       phone,
+//       email,
+//       description,
+//       image,
+//     });
+//     try {
+//       await newRestaurant.save();
+//     } catch (err) {
+//       res.status(400).json({ message: err.message });
+//     }
+//   });
+//   res.status(201).json({ message: "Restaurants created" });
+// });
 
 // Get all restaurants
 restaurantRouter.get("/restaurants", async (req, res) => {

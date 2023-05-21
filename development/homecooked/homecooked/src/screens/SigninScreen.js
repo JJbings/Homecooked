@@ -4,12 +4,15 @@ import { Text, Card, Input } from "react-native-elements";
 import Spacer from "../components/Spacer";
 import { signInUser } from "../redux/apiCalls";
 import { useDispatch, useSelector } from "react-redux";
-import { clearError } from "../redux/userSlice";
+import { clearError, setToken } from "../redux/userSlice";
 import { Button, TextInput } from "react-native-paper";
+import * as LocalAuthentication from "expo-local-authentication";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const SigninScreen = ({ navigation }) => {
-	const { error, pending, user } = useSelector((state) => state.userState);
-
+	const { error, pending, user, token } = useSelector(
+		(state) => state.userState
+	);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -18,7 +21,57 @@ const SigninScreen = ({ navigation }) => {
 	const signin = () => {
 		signInUser({ email, password }, dispatch);
 	};
+	const removeToken = async () => {
+		try {
+			await AsyncStorage.removeItem("token");
+		} catch (e) {}
+	};
+	const checkBiometricAvailability = async () => {
+		console.log("checking bio");
+		try {
+			const hasHardware = await LocalAuthentication.hasHardwareAsync();
+			const hasEnrolledBiometrics = await LocalAuthentication.isEnrolledAsync();
 
+			if (hasHardware && hasEnrolledBiometrics) {
+				// Biometric authentication is available
+				authenticateWithBiometrics();
+			} else {
+				// Biometric authentication is not available or no enrolled biometrics
+				console.log("No biometrics available");
+				dispatch(logout());
+				navigation.navigate("Signin");
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const authenticateWithBiometrics = async () => {
+		console.log("authenticating wirth biometrics");
+		try {
+			const token = await AsyncStorage.getItem("token");
+			console.log(token);
+			const { success, error } = await LocalAuthentication.authenticateAsync();
+
+			if (success) {
+				// Authentication successful
+				console.log("authentication success");
+				try {
+					dispatch(setToken(token));
+				} catch (error) {
+					console.log(error);
+				}
+			} else {
+				// Authentication failed or was canceled
+				console.log("Authentication error:", error);
+				removeToken();
+				dispatch(logout());
+				navigation.navigate("Signin");
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
 	return (
 		<View style={styles.Container}>
 			<Spacer margin={20}>
@@ -47,9 +100,17 @@ const SigninScreen = ({ navigation }) => {
 						mode='contained'
 						onPress={() => {
 							signin();
-						}}>
+						}}
+						style={{ marginBottom: 20 }}>
 						Sign in
 					</Button>
+					{/* <Button
+						mode='outlined'
+						onPress={() => {
+							checkBiometricAvailability();
+						}}>
+						Sign in using biometrics
+					</Button> */}
 				</Spacer>
 				<Spacer mb={10}>
 					<TouchableOpacity

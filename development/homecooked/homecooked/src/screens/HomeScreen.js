@@ -57,23 +57,8 @@ const HomeScreen = () => {
 					),
 				}}
 				component={RestaurantScreen}
-				listeners={({ navigation, route }) => ({
-					tabPress: (e) => {
-						console.log(route);
-						navigation.navigate(route.name);
-					},
-				})}
 			/>
-			{/* <Tab.Screen
-				options={{
-					tabBarIcon: ({ color, size }) => (
-						//<Ionicons name='settings-outline' color={color} size={size} />
-						<MaterialIcons name='food-bank' size={24} color='black' />
-					),
-				}}
-				name='TrackCreate'
-				component={TrackCreateScreen}
-			/> */}
+
 			<Tab.Screen
 				options={{
 					tabBarIcon: ({ color, size }) => (

@@ -13,7 +13,8 @@ import StartScreen from "./src/screens/StartScreen";
 const Stack = createStackNavigator();
 
 const App = () => {
-	const { token, pending } = useSelector((state) => state?.userState?.user);
+	const { token, pending } = useSelector((state) => state?.userState);
+	console.log("state token: ", token);
 	const [storageToken, setStorageToken] = useState("");
 	const getData = async () => {
 		try {
@@ -22,26 +23,22 @@ const App = () => {
 			if (value !== null) {
 				setStorageToken(value);
 			}
-		} catch (e) {
-			// error reading value
-		}
+		} catch (e) {}
 	};
 	const removeValue = async () => {
 		try {
 			await AsyncStorage.removeItem("token");
-		} catch (e) {
-			// remove error
-		}
+		} catch (e) {}
 
 		console.log("Done.");
 	};
 	useEffect(() => {
-		getData();
+		//getData();
 		//removeValue();
 		return () => {};
 	}, []);
 
-	const isSignedIn = token ? true : storageToken ? true : false;
+	const isSignedIn = token ? true : false;
 	return (
 		<>
 			<NavigationContainer>

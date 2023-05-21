@@ -33,48 +33,7 @@
       "country": "USA"
     },
     "phone": "555-1234",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 34.0522,
@@ -95,48 +54,7 @@
       "country": "USA"
     },
     "phone": "555-5678",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 40.7128,
@@ -157,48 +75,7 @@
       "country": "USA"
     },
     "phone": "555-9012",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 37.7749,
@@ -219,48 +96,7 @@
       "country": "USA"
     },
     "phone": "(123) 456-7890",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 37.7749,
@@ -281,48 +117,7 @@
       "country": "USA"
     },
     "phone": "(123) 456-7890",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 37.7749,
@@ -364,48 +159,7 @@
       "country": "USA"
     },
     "phone": "555-555-5555",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 40.712776,
@@ -426,48 +180,7 @@
       "country": "USA"
     },
     "phone": "555-555-5555",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 37.7749,
@@ -488,48 +201,7 @@
       "country": "USA"
     },
     "phone": "555-1234",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 34.0641,
@@ -550,48 +222,7 @@
       "country": "USA"
     },
     "phone": "555-5678",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 37.7749,
@@ -612,48 +243,7 @@
       "country": "USA"
     },
     "phone": "555-555-1234",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 40.7128,
@@ -673,48 +263,7 @@
       "country": "USA"
     },
     "phone": "555-555-5678",
-    "menuItems": [
-      {
-        "name": "Pepperoni Pizza",
-        "description": "Classic pizza topped with pepperoni slices",
-        "price": 12.99,
-        "image": "https://example.com/pepperoni-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Margherita Pizza",
-        "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil",
-        "price": 10.99,
-        "image": "https://example.com/margherita-pizza.jpg",
-        "category": "Pizza",
-        "type": "Regular"
-      },
-      {
-        "name": "Caesar Salad",
-        "description": "Fresh romaine lettuce, parmesan cheese, and croutons tossed in a creamy caesar dressing",
-        "price": 8.99,
-        "image": "https://example.com/caesar-salad.jpg",
-        "category": "Salad",
-        "type": "Regular"
-      },
-      {
-        "name": "Chicken Alfredo",
-        "description": "Pasta with creamy alfredo sauce and grilled chicken",
-        "price": 14.99,
-        "image": "https://example.com/chicken-alfredo.jpg",
-        "category": "Pasta",
-        "type": "Regular"
-      },
-      {
-        "name": "Burger",
-        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
-        "price": 9.99,
-        "image": "https://example.com/burger.jpg",
-        "category": "Burgers",
-        "type": "Regular"
-      }
-    ],
+    "menuItems": [],
     "orders": [],
     "coords": {
       "latitude": 37.7749,
