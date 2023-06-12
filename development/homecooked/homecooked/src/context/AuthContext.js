@@ -21,8 +21,8 @@ const authReducer = (state, action) => {
 
 const signup = (dispatch) => {
 	return async ({ username, email, password }) => {
-		console.log("getting: ");
-		console.log(username, email, password);
+		//("getting: ");
+		//console.log(username, email, password);
 		// Make API request to sign up with that email and password.
 		// If we sign up, modify our state, and say that we are authenticated.
 		// If signing up fails, we probably need to reflect an error message somewhere.

@@ -19,7 +19,7 @@ const SignupScreen = ({ navigation }) => {
 	const [userName, setUsername] = useState("");
 
 	const signup = () => {
-		console.log(email, password);
+		//console.log(email, password);
 		signUpUser({ userName, email, password }, dispatch);
 	};
 

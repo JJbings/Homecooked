@@ -46,7 +46,7 @@ const AccountScreen = ({ navigation }) => {
 	}, [user]);
 
 	const resetUser = () => {
-		console.log(user);
+		//console.log(user);
 		setEmail(user.email);
 		setUserName(user.username);
 		setFirstName(user.firstname);

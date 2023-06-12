@@ -27,7 +27,7 @@ const SigninScreen = ({ navigation }) => {
 		} catch (e) {}
 	};
 	const checkBiometricAvailability = async () => {
-		console.log("checking bio");
+		//console.log("checking bio");
 		try {
 			const hasHardware = await LocalAuthentication.hasHardwareAsync();
 			const hasEnrolledBiometrics = await LocalAuthentication.isEnrolledAsync();
@@ -37,39 +37,39 @@ const SigninScreen = ({ navigation }) => {
 				authenticateWithBiometrics();
 			} else {
 				// Biometric authentication is not available or no enrolled biometrics
-				console.log("No biometrics available");
+				//console.log("No biometrics available");
 				dispatch(logout());
 				navigation.navigate("Signin");
 			}
 		} catch (error) {
-			console.log(error);
+			//console.log(error);
 		}
 	};
 
 	const authenticateWithBiometrics = async () => {
-		console.log("authenticating wirth biometrics");
+		//console.log("authenticating wirth biometrics");
 		try {
 			const token = await AsyncStorage.getItem("token");
-			console.log(token);
+			//console.log(token);
 			const { success, error } = await LocalAuthentication.authenticateAsync();
 
 			if (success) {
 				// Authentication successful
-				console.log("authentication success");
+				//console.log("authentication success");
 				try {
 					dispatch(setToken(token));
 				} catch (error) {
-					console.log(error);
+					//console.log(error);
 				}
 			} else {
 				// Authentication failed or was canceled
-				console.log("Authentication error:", error);
+				//console.log("Authentication error:", error);
 				removeToken();
 				dispatch(logout());
 				navigation.navigate("Signin");
 			}
 		} catch (error) {
-			console.log(error);
+			//console.log(error);
 		}
 	};
 	return (
@@ -127,6 +127,7 @@ const SigninScreen = ({ navigation }) => {
 					{error && (
 						<Text h5 style={styles.Error}>
 							Username or password incorrect.
+							{error}
 						</Text>
 					)}
 				</Spacer>

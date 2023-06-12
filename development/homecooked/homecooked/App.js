@@ -8,13 +8,14 @@ import SignupScreen from "./src/screens/SignupScreen";
 import HomeScreen from "./src/screens/HomeScreen";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import StartScreen from "./src/screens/StartScreen";
+import { SafeAreaView, StyleSheet } from "react-native";
 //import { Provider as AuthProvider } from "./src/context/AuthContext";
 
 const Stack = createStackNavigator();
 
 const App = () => {
 	const { token, pending } = useSelector((state) => state?.userState);
-	console.log("state token: ", token);
+	//console.log("state token: ", token);
 	const [storageToken, setStorageToken] = useState("");
 	const getData = async () => {
 		try {
@@ -30,7 +31,7 @@ const App = () => {
 			await AsyncStorage.removeItem("token");
 		} catch (e) {}
 
-		console.log("Done.");
+		//console.log("Done.");
 	};
 	useEffect(() => {
 		//getData();
@@ -38,7 +39,8 @@ const App = () => {
 		return () => {};
 	}, []);
 
-	const isSignedIn = token ? true : false;
+	//const isSignedIn = token ? true : false;
+	const isSignedIn = true;
 	return (
 		<>
 			<NavigationContainer>
@@ -81,8 +83,14 @@ const App = () => {
 
 export default () => {
 	return (
-		<Provider store={store}>
-			<App />
-		</Provider>
+		<SafeAreaView style={styles.app}>
+			<Provider store={store}>
+				<App />
+			</Provider>
+		</SafeAreaView>
 	);
 };
+
+const styles = StyleSheet.create({
+	app: { flex: 1 },
+});

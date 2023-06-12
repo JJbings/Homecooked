@@ -41,7 +41,7 @@ export const userSlice = createSlice({
 			state.pending = true;
 		},
 		signInSuccess: (state, action) => {
-			console.log("signin success");
+			//console.log("signin success");
 			state.pending = false;
 			state.token = action.payload.token;
 		},
@@ -54,7 +54,7 @@ export const userSlice = createSlice({
 		},
 		setToken: (state, action) => {
 			state.token = action.payload;
-			console.log("token set to state");
+			//console.log("token set to state");
 		},
 		setUser: (state, action) => {
 			state.user.email = action.payload.email;
@@ -66,7 +66,7 @@ export const userSlice = createSlice({
 		logout: (state) => {
 			state.user = {};
 			state.token = "";
-			console.log("removed token from state", state.token);
+			//console.log("removed token from state", state.token);
 		},
 	},
 });

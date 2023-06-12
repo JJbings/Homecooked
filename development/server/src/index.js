@@ -31,33 +31,52 @@ app.use(trackRoutes);
 app.use(userRoutes);
 mongoose.connect(connectionString);
 
-// const insertRestaurantData = async () => {
-//   try {
-//     // Sample restaurant data
+const insertRestaurantData = async () => {
+	try {
+		// Sample restaurant data
 
-//     // Insert the restaurant data into the database
-//     console.log("Inserting data ");
-//     await Restaurant.insertMany(restaurantData);
-//     console.log("Restaurant data inserted successfully");
-//   } catch (error) {
-//     console.error("Error inserting restaurant data:", error);
-//   }
-// };
+		// Insert the restaurant data into the database
+		console.log("Inserting data ");
+		await Restaurant.insertMany(restaurantData);
+		console.log("Restaurant data inserted successfully");
+	} catch (error) {
+		console.error("Error inserting restaurant data:", error);
+	}
+};
 
-//insertRestaurantData();
+// for (let i = 0; i < 10; i++) {
+// 	insertRestaurantData();
+// 	console.log("number: ", i);
+// }
+
+for (let i = 0; i < 90; i++) {
+	insertRestaurantData();
+	console.log("number: ", i);
+}
+
+// for (let i = 0; i < 900; i++) {
+// 	insertRestaurantData();
+// 	console.log("number: ", i);
+// }
+
+// Insert the restaurant data into the database 100.000
+// for (let i = 0; i < 9000; i++) {
+// 	insertRestaurantData();
+// 	console.log("number: ", i);
+// }
 
 mongoose.connection.on("error", (error) => {
-  console.log(error);
+	console.log(error);
 });
 
 mongoose.connection.on("connected", () => {
-  console.log("Mongoose is connected!");
+	console.log("Mongoose is connected!");
 });
 
 app.get("/", requireAuth, (req, res) => {
-  res.send(`Your email: ${req.user.email}`);
+	res.send(`Your email: ${req.user.email}`);
 });
 
 app.listen(3000, () => {
-  console.log("Example app listening on port 3000!");
+	console.log("Example app listening on port 3000!");
 });

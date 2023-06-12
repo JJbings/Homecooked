@@ -33,19 +33,21 @@ export const signUpUser = async (userInfo, dispatch) => {
 };
 export const signInUser = async (userInfo, dispatch) => {
 	dispatch(signInStart());
+	console.log("starting sign in user");
+	console.log(userInfo);
 	try {
 		const response = await tracker.post("/signin", {
 			email: userInfo.email,
 			password: userInfo.password,
 		});
-
+		console.log("response: ", response);
 		const token = response?.data?.token;
-
+		console.log("token: ", token);
 		try {
 			await AsyncStorage.setItem("token", token);
-			console.log("token set to LOCAL storage");
+			// console.log("token set to LOCAL storage");
 		} catch (e) {
-			console.log("could not save token");
+			//console.log("could not save token");
 		}
 
 		dispatch(signInSuccess(response.data));
@@ -54,6 +56,7 @@ export const signInUser = async (userInfo, dispatch) => {
 		getUserInfo(token, dispatch);
 	} catch (error) {
 		dispatch(signInError(error?.message));
+		console.log("error: ", error?.message);
 	}
 };
 
@@ -77,7 +80,7 @@ export const updateUserInfo = async (userInfo, token, dispatch) => {
 				Authorization: `Bearer ${token}`,
 			},
 		});
-		console.log("UPDATING USER");
+		//console.log("UPDATING USER");
 
 		dispatch(setUser(response.data));
 	} catch (error) {

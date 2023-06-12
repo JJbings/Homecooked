@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const CartScreen = () => {
 	const { cart, pending, error } = useSelector((state) => state.cartState);
 
-	console.log("cart: ", cart);
+	//console.log("cart: ", cart);
 	const description = "Menu choice description here";
 	const price = "$12,50";
 	const subMenuTitle = "Submenu title here";

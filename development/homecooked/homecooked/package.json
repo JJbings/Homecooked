@@ -16,17 +16,18 @@
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "expo": "~48.0.15",
+    "expo-local-authentication": "~13.3.0",
     "expo-status-bar": "~1.4.4",
     "native-base": "^3.4.28",
     "react": "18.2.0",
+    "react-devtools": "^4.27.8",
     "react-native": "0.71.7",
     "react-native-elements": "^3.4.3",
     "react-native-paper": "^5.7.2",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.20.0",
     "react-native-svg": "^12.1.1",
-    "react-redux": "^8.0.5",
-    "expo-local-authentication": "~13.3.0"
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

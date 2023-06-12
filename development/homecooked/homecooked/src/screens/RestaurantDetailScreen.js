@@ -50,7 +50,7 @@ const RestauarantDetailScreen = () => {
 	];
 
 	const handleAddToCart = (menuItem) => {
-		console.log("cartitem: ", menuItem);
+		//console.log("cartitem: ", menuItem);
 		dispatch(addToCart(menuItem));
 	};
 
